@@ -7,9 +7,11 @@ mongoose.connect('mongodb://localhost/vidly', {useNewUrlParser:true, useUnifiedT
 
 const genres = require('./routes/genres');
 const customers = require('./routes/customers');
+const movies = require('./routes/movie');
 app.use(express.json());
 app.use('/api/genres', genres);
 app.use('/api/customers', customers);
+app.use('/api/movies', movies);
 
 
 
